@@ -3,17 +3,6 @@
   height: 100%;
 }
 
-.countryLabel {
-  padding-top: 5vh;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  font-size: 0.5vw;
-  color: rgb(241, 234, 234);
-}
-
 svg path,
 svg g path {
   transition-duration: 0.2s;

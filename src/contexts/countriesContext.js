@@ -1,5 +1,5 @@
 /* eslint-disable object-curly-newline */
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 const CountriesContext = createContext();
 
@@ -10,11 +10,6 @@ export function useCountries() {
 export function CountriesProvider({ children }) {
   const [visitedCountries, setVisitedCountries] = useState([]);
   const [currentCountry, setCurrentCountry] = useState({});
-
-  useEffect(() => {
-    setVisitedCountries([]);
-    setCurrentCountry({});
-  }, []);
 
   const handleCurrentCountry = ({ target }) => {
     console.log(target.attributes.fill.value);

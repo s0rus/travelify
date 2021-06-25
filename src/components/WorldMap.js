@@ -668,6 +668,10 @@ const WorldMap = ({ handleCountryLabel, handleHideCountryLabel }) => {
             d="M1229.5 428.2l-1.9 3.5-1.3-1.2-1.3 0.5-3.2-0.1-0.2-2-0.5-1.8 1.8-3 1.9-2.8 2.4 0.6 1.7-1.6 1.4 2-0.1 2.6-3.1 1.6 2.4 1.7z"
             id="DJ"
             name="Djibouti"
+            fill={visitedCountries.includes('DJ') ? '#00FFC2' : ''}
+            onClick={(e) => handleCurrentCountry(e)}
+            onMouseEnter={(e) => handleCountryLabel(e)}
+            onMouseLeave={(e) => handleHideCountryLabel(e)}
           />
           <path
             d="M 1046.1 147.7 1043.7 152.6 1038.5 149.1 1037.6 146.6 1044.4 144.6 1046.1 147.7 Z"
@@ -1402,7 +1406,7 @@ const WorldMap = ({ handleCountryLabel, handleHideCountryLabel }) => {
             d="M1182.3 588.9l0.4 0 1.9 2.1 2.2 4.6 0.1 8.3-2.5 1.3-1.9 4.5-3.5-4-0.2-4.5 1.3-3-0.2-2.6-2.2-1.6-1.5 0.6-3.2-3.1-2.9-1.6 2-6 1.8-2.2-0.9-5.4 1.3-5.2 1-1.7-1.3-5.4-2.6-2.9 5.5 1.2 1 1.7-0.1 0.8 1.8 4.1 0.2 7.7-1.8 3.6 1.6 4.7-0.2 2.8 1.2 1.9-0.1 2.4 0.9 1.4 1-1.6 1.9 2.5 0.2-0.8-1-3.4-1.1-0.3-0.1-0.9z"
             id="MW"
             name="Malawi"
-            fill={visitedCountries.includes('MR') ? '#00FFC2' : ''}
+            fill={visitedCountries.includes('MW') ? '#00FFC2' : ''}
             onClick={(e) => handleCurrentCountry(e)}
             onMouseEnter={(e) => handleCountryLabel(e)}
             onMouseLeave={(e) => handleHideCountryLabel(e)}
@@ -1717,7 +1721,7 @@ const WorldMap = ({ handleCountryLabel, handleHideCountryLabel }) => {
             d="M938.9 324.3l-0.1 0.4-0.1 1.2-0.2 9.8-18-0.4-0.2 16.5-5.2 0.5-1.5 3.3 0.9 9.3-21.7 0-1.3 2.1 0.3-2.7 0.1 0 12.5-0.5 0.7-2.3 2.4-2.9 2-8.9 7.9-6.9 2.7-8.1 1.8-0.5 1.9-5 4.6-0.7 2 0.9 2.5 0 1.8-1.5 3.4-0.2-0.1-3.4 0.9 0z"
             id="EH"
             name="Western Sahara"
-            fill={visitedCountries.includes('EHY') ? '#00FFC2' : ''}
+            fill={visitedCountries.includes('EH') ? '#00FFC2' : ''}
             onClick={(e) => handleCurrentCountry(e)}
             onMouseEnter={(e) => handleCountryLabel(e)}
             onMouseLeave={(e) => handleHideCountryLabel(e)}
@@ -1834,7 +1838,7 @@ const WorldMap = ({ handleCountryLabel, handleHideCountryLabel }) => {
             d="M1195 287.5l-9.7 6.9-6.3-2.6-0.1 0 0.6-1-0.4-2.6 0.9-3.5 2.7-2.5-1.2-2.5-2.5-0.3-1.1-4.9 1-2.7 1.3-1.4 1.2-1.4-0.2-3.5 1.9 1.2 5.6-1.8 3 1.2 4.4 0 5.7-2.4 2.9 0.1 5.9-1-2.1 4-2.7 1.6 1.2 4.7-1 7.7-11 6.7z"
             id="SY"
             name="Syria"
-            fill={visitedCountries.includes('SYY') ? '#00FFC2' : ''}
+            fill={visitedCountries.includes('SY') ? '#00FFC2' : ''}
             onClick={(e) => handleCurrentCountry(e)}
             onMouseEnter={(e) => handleCountryLabel(e)}
             onMouseLeave={(e) => handleHideCountryLabel(e)}
@@ -1978,7 +1982,7 @@ const WorldMap = ({ handleCountryLabel, handleHideCountryLabel }) => {
             d="M648.7 448.1l-4.7 3.8-0.5 2.3 1.8 2.4-1.4 1.2-3.5 1 0 3-1.6 1.8 3.7 4.8 0.7 1.8-2.1 2.5-6.4 2.4-4.1 1-1.7 1.5-4.5-1.6-4.1-0.8-1.1 0.6 2.5 1.6-0.3 4.3 0.7 4.1 4.8 0.5 0.3 1.4-4.1 1.8-0.7 2.7-2.4 1.1-4.2 1.5-1.1 2-4.4 0.4-3.1-3.4-1.6-6.4-1.5-2.3-2-1.4 2.9-3.2-0.2-1.4-1.5-1.9-1.1-4.3 0.6-4.6 1.3-2.2 1.2-3.4-2-1.1-3.2 0.7-4.1-0.3-2.3 0.7-3.8-5.6-3.3-0.8-7.3 0.6-1.2-2.2-1.4-0.5-0.1-1.4 0.7-2.4-0.3-2.5-1.2-1.5-0.6-2.9-2.9-0.4 1.8-3.8 0.9-4.6 1.8-2.4 2.3-1.8 1.6-3.2 3.7-1.1-0.2 1.5-3.4 0.8 1.7 2.9-0.3 3.4-2.7 3.7 1.9 5.1 2.5-0.4 1.5-4.7-1.7-2.2 0-4.9 7.2-2.6-0.6-3 2.1-2.1 1.7 4.6 4 0.1 3.4 3.5 0.2 2.2 5 0 6.1-0.6 3.1 2.8 4.2 0.8 3.3-2 0.1-1.6 7.1-0.4 6.7-0.1-4.9 1.9 1.8 3.1 4.5 0.4 4.2 3.2 0.7 5.1 2.9-0.1 2.2 1.5z"
             id="VE"
             name="Venezuela"
-            fill={visitedCountries.includes('VEY') ? '#00FFC2' : ''}
+            fill={visitedCountries.includes('VE') ? '#00FFC2' : ''}
             onClick={(e) => handleCurrentCountry(e)}
             onMouseEnter={(e) => handleCountryLabel(e)}
             onMouseLeave={(e) => handleHideCountryLabel(e)}
@@ -1987,7 +1991,7 @@ const WorldMap = ({ handleCountryLabel, handleHideCountryLabel }) => {
             d="M1586.5 363.5l-6.5 5.4-3.7 6.1-0.6 4.5 5.3 6.7 6.5 8.4 5.7 4 4.1 5.1 4 11.9 0.4 11.3-4.3 4.2-6.1 4.2-4.2 5.3-6.6 6-2.3-4.1 1.2-4.4-4.4-3.6 4.6-2.6 5.9-0.5-2.8-3.8 9-5-0.1-7.7-1.8-4.3 0.2-6.4-2-4.5-4.9-4.5-4.4-5.6-5.7-7.6-7.3-3.9 1.2-2.3 3.3-1.7-3-5.6-6.8 0-3.5-5.8-4-5.1 2.7-1.6 4.4 0.1 5.3-0.8 4.1-3.4 3.1 2.4 5.3 1.2-0.3 3.7 3.1 2.6 5.9 1.7z"
             id="VN"
             name="Vietnam"
-            fill={visitedCountries.includes('VNY') ? '#00FFC2' : ''}
+            fill={visitedCountries.includes('VN') ? '#00FFC2' : ''}
             onClick={(e) => handleCurrentCountry(e)}
             onMouseEnter={(e) => handleCountryLabel(e)}
             onMouseLeave={(e) => handleHideCountryLabel(e)}
@@ -2371,11 +2375,11 @@ const WorldMap = ({ handleCountryLabel, handleHideCountryLabel }) => {
           <path
             d="M 580.4 366 580 366.5 579.8 367 579.2 367.3 578.7 367.3 578.6 367.2 578.2 367.4 577.7 367.5 577.1 367.3 576.7 367.4 576.6 366.9 576.9 366.7 577.1 366.4 577.5 366.2 577.8 365.8 578.2 365.8 578.5 365.6 578.7 365.9 579.2 366.1 579.7 365.9 580.4 364.9 580.7 364.9 580.7 365.1 580.4 366 Z"
             id="BS"
-            classNamname="
-                        fill={visitedCountries.includes('BS') ? '#00FFC2' : ''}
+            name="Bahamas"
+            fill={visitedCountries.includes('BS') ? '#00FFC2' : ''}
             onClick={(e) => handleCurrentCountry(e)}
             onMouseEnter={(e) => handleCountryLabel(e)}
-            onMouseLeave={(e) => handleHideCountryLabel(e)}Bahamas"
+            onMouseLeave={(e) => handleHideCountryLabel(e)}
           />
           <path
             d="M 580.6 364.3 580.4 363.7 581 363.4 581.3 363.7 581.3 363.9 581 364 580.6 364.3 Z"
@@ -2587,11 +2591,11 @@ const WorldMap = ({ handleCountryLabel, handleHideCountryLabel }) => {
           <path
             d="M 847.8 406.5 847.6 406.8 847.4 406.6 847.4 406.3 847.7 406.2 847.8 406.5 Z"
             id="CV"
-            classNamname="Cape
-                        fill={visitedCountries.includes('CV') ? '#00FFC2' : ''}
+            name="Cape Verde"
+            fill={visitedCountries.includes('CV') ? '#00FFC2' : ''}
             onClick={(e) => handleCurrentCountry(e)}
             onMouseEnter={(e) => handleCountryLabel(e)}
-            onMouseLeave={(e) => handleHideCountryLabel(e)} Verde"
+            onMouseLeave={(e) => handleHideCountryLabel(e)}
           />
           <path
             d="M 849.7 406.6 849.5 406.7 849.1 406.6 848.8 406.3 848.7 406 848.9 405.6 849.4 405.3 849.8 405.3 850 406 849.9 406.4 849.7 406.6 Z"

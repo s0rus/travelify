@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useCountries } from './contexts/countriesContext';
-import './App.css';
-import WorldMap from './components/WorldMap';
-import CountryDetails from './components/CountryDetails';
+import { useAuth } from '../contexts/authContext';
+import { useCountries } from '../contexts/countriesContext';
+import '../styles/App.css';
+import WorldMap from './WorldMap';
+import CountryDetails from './CountryDetails';
 
 function App() {
+  const { currentUser } = useAuth();
   const { currentCountry } = useCountries();
   const [countryDetailsModal, setCountryDetailsModal] = useState();
   const [countryLabel, setCountryLabel] = useState(null);
@@ -24,8 +26,11 @@ function App() {
   return (
     <>
       <div className="Navbar">
-        <h1>TRAVELIFY</h1>
-        <p>{countryLabel}</p>
+        <div className="navbar--country-label">
+          <p>{countryLabel}</p>
+        </div>
+        <h1 className="navbar-logo">TRAVELIFY</h1>
+        <p className="navbar-email">{currentUser.email}</p>
       </div>
       <div className="App">
         <WorldMap

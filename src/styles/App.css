@@ -4,7 +4,7 @@
   align-items: center;
   flex-direction: column;
 
-  background-color: #01162e;
+  background-color: var(--background);
   width: 100vw;
   height: 95vh;
 
@@ -34,8 +34,28 @@
   position: relative;
 
   color: #fff;
-  background-color: #010f1f;
+  background-color: var(--background-secondary);
 
   z-index: 999;
   cursor: default;
+}
+
+.navbar--country-label {
+  flex: 1;
+}
+.Navbar .navbar-email,
+.Navbar .navbar-logo {
+  flex: 1;
+}
+
+.navbar-logo {
+  text-align: center;
+}
+
+.navbar-email {
+  text-align: right;
+}
+
+.navbar--country-label p {
+  text-align: left;
 }

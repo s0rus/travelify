@@ -1,3 +1,10 @@
+:root {
+  --background: #01162e;
+  --background-secondary: #010f1f;
+  --primary: #ff3b85;
+  --secondary: #00ffc2;
+}
+
 *,
 *::before,
 *::after {
@@ -18,9 +25,34 @@ body {
   overflow: hidden;
 }
 
-button {
+button,
+input[type='submit'] {
+  cursor: pointer;
+}
+
+button,
+input {
   font-family: 'Recursive', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
     'Droid Sans', 'Helvetica Neue', sans-serif;
+}
 
-  cursor: pointer;
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  text-decoration: underline;
+}
+
+.error--wrapper {
+  margin: 1em 2em;
+  padding: 0.5em;
+
+  text-align: center;
+  color: var(--secondary);
+  background-color: var(--primary);
+
+  border-radius: 3px;
 }
