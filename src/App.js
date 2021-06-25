@@ -1,24 +1,45 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import { useCountries } from './contexts/countriesContext';
 import './App.css';
+import WorldMap from './components/WorldMap';
+import CountryDetails from './components/CountryDetails';
 
 function App() {
+  const { currentCountry } = useCountries();
+  const [countryDetailsModal, setCountryDetailsModal] = useState();
+  const [countryLabel, setCountryLabel] = useState(null);
+
+  useEffect(() => {
+    setCountryDetailsModal(currentCountry.countryName);
+  }, [currentCountry]);
+
+  const handleCountryLabel = (e) => {
+    setCountryLabel(e.target.attributes.name.value);
+  };
+
+  const handleHideCountryLabel = () => {
+    setCountryLabel(null);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="Navbar">
+        <h1>TRAVELIFY</h1>
+        <p>{countryLabel}</p>
+      </div>
+      <div className="App">
+        <WorldMap
+          handleCountryLabel={handleCountryLabel}
+          handleHideCountryLabel={handleHideCountryLabel}
+        />
+        {countryDetailsModal && (
+          <CountryDetails
+            countryDetails={currentCountry}
+            closeDetailsModal={setCountryDetailsModal}
+          />
+        )}
+      </div>
+    </>
   );
 }
 
