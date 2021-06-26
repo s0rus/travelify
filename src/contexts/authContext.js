@@ -13,6 +13,10 @@ export function AuthProvider({ children }) {
 
   const signUp = async (email, password) => auth.createUserWithEmailAndPassword(email, password);
 
+  const logIn = async (email, password) => auth.signInWithEmailAndPassword(email, password);
+
+  const logOut = async () => auth.signOut();
+
   useEffect(() => {
     const userHandler = auth.onAuthStateChanged((user) => {
       setCurrentUser(user);
@@ -25,6 +29,8 @@ export function AuthProvider({ children }) {
   const value = {
     currentUser,
     signUp,
+    logIn,
+    logOut,
   };
 
   return <AuthContext.Provider value={value}>{!loading && children}</AuthContext.Provider>;

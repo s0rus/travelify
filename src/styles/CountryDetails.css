@@ -31,6 +31,7 @@
 }
 
 .country-details--title {
+  min-height: 47px;
   margin-bottom: 2em;
 
   display: flex;

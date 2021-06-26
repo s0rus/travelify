@@ -12,8 +12,6 @@ export function CountriesProvider({ children }) {
   const [currentCountry, setCurrentCountry] = useState({});
 
   const handleCurrentCountry = ({ target }) => {
-    console.log(target.attributes.fill.value);
-
     setCurrentCountry({
       countryID: target.attributes.id.value,
       countryName: target.attributes.name.value,

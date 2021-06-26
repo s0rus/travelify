@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { useAuth } from '../contexts/authContext';
 import useInput from '../hooks/useInput';
 import '../styles/FormPage.css';
 
 const Register = () => {
-  const { signUp } = useAuth();
+  const { currentUser, signUp } = useAuth();
   const email = useInput('');
   const password = useInput('');
   const confirmPassword = useInput('');
@@ -27,7 +27,9 @@ const Register = () => {
     }
   };
 
-  return (
+  const registerContent = currentUser ? (
+    <Redirect to="/" />
+  ) : (
     <div className="page--root">
       <div className="content--wrapper">
         <h1>TRAVELIFY</h1>
@@ -88,6 +90,8 @@ const Register = () => {
       </div>
     </div>
   );
+
+  return registerContent;
 };
 
 export default Register;
