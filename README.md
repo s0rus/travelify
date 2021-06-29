@@ -1,18 +1,5 @@
-# TRAVELIFY
+# Travelify
 
-App that lets you point out countries which you've already visited.
+App that lets you mark out countries you've visited so far, while giving some insights on the country like capital city, region and population.
 
-- [ ] SETUP FIREBASE
-  - [x] USER REGISTRATION
-  - [x] USER LOGIN
-  - [x] USER LOG OUT
-  - [ ] SETUP FIRESTORE
-    - [ ] QUERY VISITED COUNTRIES FROM FIRESTORE
-- [x] SETUP COUNTRY DETAILS ON CLICK
-- [x] SHOW COUNTRY NAME AND FLAG
-- [ ] SETUP OPTION TO ADD CITIES WHICH YOU'VE VISITED IN PARTICULAR COUNTRY (?)
-- [ ] QUERY AN API TO GET CITIES FROM PARTICULAR COUNTRY (?)
-- [x] SETUP MAP
-  - [x] MAKE SVG SCALABLE ON SCROLL
-  - [x] MAKE SVG DRAGGABLE
-- [ ] MAKE IT MOBILE VIABLE
+# [LIVE DEMO](https://travelify.netlify.app/)
