@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import NumberFormat from 'react-number-format';
 import { useCountries } from '../contexts/countriesContext';
 import '../styles/CountryDetails.css';
 import { ReactComponent as Close } from '../svg/close.svg';
+import { ReactComponent as Loading } from '../svg/loading.svg';
 
 const CountryDetails = ({ countryDetails, closeDetailsModal }) => {
   const { visitedCountries, markAsVisited, markAsUnvisited } = useCountries();
+  const [countryInfo, setCountryInfo] = useState({});
+  const [loading, setLoading] = useState(false);
+
+  useEffect(async () => {
+    setLoading(true);
+    const response = await fetch(
+      `https://restcountries.eu/rest/v2/alpha/${countryDetails.countryID.toLowerCase()}`,
+    );
+
+    const data = await response.json();
+    setCountryInfo(data);
+    setLoading(false);
+  }, [countryDetails]);
 
   const isVisited = visitedCountries.includes(countryDetails.countryID);
 
@@ -49,9 +64,32 @@ const CountryDetails = ({ countryDetails, closeDetailsModal }) => {
             MARK AS VISITED
           </button>
         )}
+        <div className="details--country-info">
+          {loading ? (
+            <Loading className="details--loading" />
+          ) : (
+            countryInfo && (
+              <>
+                <div className="details--content">
+                  <p>{`Capital city: ${countryInfo.capital}`}</p>
+                  <p>{`Region: ${countryInfo.region}`}</p>
+                  <p>{`Subregion: ${countryInfo.subregion}`}</p>
+                  <p>
+                    {'Population: '}
+                    <NumberFormat
+                      value={countryInfo.population}
+                      displayType="text"
+                      thousandSeparator
+                    />
+                  </p>
+                </div>
+              </>
+            )
+          )}
+        </div>
       </div>
       <div className="country-details--footer">
-        <span>{countryDetails.countryID.repeat(20)}</span>
+        <span>{countryDetails.countryID.repeat(40)}</span>
       </div>
     </div>
   );

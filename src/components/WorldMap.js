@@ -11,10 +11,9 @@ const WorldMap = ({ handleCountryLabel, handleHideCountryLabel }) => {
 
   useEffect(() => {
     panzoom(mapRef.current, {
-      minZoom: 0.6,
-      maxZoom: 3,
-      bounds: true,
-      boundsPadding: 0.2,
+      maxZoom: 6,
+      /* bounds: true, */
+      /* boundsPadding: 0.2, */
       onTouch: () => false,
     });
   }, []);
@@ -1660,6 +1659,7 @@ const WorldMap = ({ handleCountryLabel, handleHideCountryLabel }) => {
             name="Poland"
             fill={visitedCountries.includes('PL') ? '#00FFC2' : ''}
             onClick={(e) => handleCurrentCountry(e)}
+            onTouchStart={(e) => handleCountryLabel(e)}
             onMouseEnter={(e) => handleCountryLabel(e)}
             onMouseLeave={(e) => handleHideCountryLabel(e)}
           />

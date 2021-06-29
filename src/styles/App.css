@@ -9,6 +9,7 @@
   height: 95vh;
 
   cursor: grab;
+  -webkit-overflow-scrolling: touch;
 }
 
 .App:active {
@@ -42,20 +43,79 @@
 
 .navbar--country-label {
   flex: 1;
+  font-size: 2vmin;
 }
-.Navbar .navbar-email,
+.Navbar .navbar-settings,
 .Navbar .navbar-logo {
   flex: 1;
 }
 
 .navbar-logo {
   text-align: center;
+  font-size: 4vmin;
 }
 
-.navbar-email {
-  text-align: right;
+.navbar-settings {
+  transition-duration: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .navbar--country-label p {
   text-align: left;
+}
+
+.navbar--settings-button {
+  height: 100%;
+  background-color: transparent;
+  border: 0;
+}
+
+.navbar--settings-button svg {
+  width: 4vmin;
+  height: 4vmin;
+}
+
+.settings-active {
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+
+.settings-unactive {
+  transform: rotate(-45deg);
+  transition: transform 0.2s;
+}
+
+@media screen and (max-width: 900px) {
+  .App {
+    position: absolute;
+    top: 5vh;
+  }
+
+  .Navbar {
+    width: 100vw;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .navbar--settings-button svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .navbar--country-label p {
+    font-size: 1.5em;
+  }
+
+  .country-details--title {
+    margin-bottom: 0.5em !important;
+  }
+
+  .country-details--close {
+    width: 28px !important;
+    height: 28px !important;
+  }
 }

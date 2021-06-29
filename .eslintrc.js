@@ -22,5 +22,7 @@ module.exports = {
     'no-console': 'off',
     'react/prop-types': 0,
     'object-curly-newline': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'function-paren-newline': 'off',
   },
 };
