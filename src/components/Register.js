@@ -1,6 +1,8 @@
+/* eslint-disable operator-linebreak */
 import React, { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { useAuth } from '../contexts/authContext';
+import { ReactComponent as Logo } from '../svg/logo.svg';
 import useInput from '../hooks/useInput';
 import '../styles/FormPage.css';
 
@@ -22,7 +24,10 @@ const Register = () => {
 
       await signUp(email.value, password.value);
     } catch (err) {
-      const errorMsg = err.code === 'auth/invalid-email' ? 'The e-mail is not valid.' : err.message;
+      const errorMsg =
+        err.code === 'auth/invalid-email'
+          ? 'The e-mail is not valid.'
+          : err.message;
       setError(errorMsg);
     }
   };
@@ -32,7 +37,7 @@ const Register = () => {
   ) : (
     <div className="page--root">
       <div className="content--wrapper">
-        <h1>TRAVELIFY</h1>
+        <Logo />
         <div className="form--wrapper">
           {error && (
             <div className="error--wrapper">

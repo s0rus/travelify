@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="247.5" height="64" viewBox="0 0 247.5 64">
+  <g id="TRAVELIFY_LOGO" data-name="TRAVELIFY LOGO" transform="translate(-75.5 -22.256)">
+    <text id="TRAVELIFY" transform="translate(102 75.256)" fill="#ff3b85" font-size="42" font-family="Recursive-Bold, Recursive Sans Linear" font-weight="700"><tspan x="0" y="0">TRAVELIFY</tspan></text>
+    <g id="TRAVELIFY-SIGN" transform="translate(75.5 22.256)">
+      <path id="Path_3" data-name="Path 3" d="M10,0A10,10,0,0,1,20,10c0,5.523-10,23.111-10,23.111S0,15.523,0,10A10,10,0,0,1,10,0Z" transform="translate(0 21.578)" fill="#ff3b85"/>
+      <path id="Path_2" data-name="Path 2" d="M65.971,149.9s18.59-34.211,66.038-23.554" transform="translate(-55 -118.422)" fill="none" stroke="#ff3b85" stroke-width="5"/>
+      <circle id="Ellipse_4" data-name="Ellipse 4" cx="10" cy="10" r="10" transform="translate(74)" fill="#ff3b85"/>
+    </g>
+  </g>
+</svg>

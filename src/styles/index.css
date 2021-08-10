@@ -18,11 +18,11 @@ html,
 body {
   width: 100%;
 
-  font-family: 'Recursive', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-    'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Recursive', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 
   overflow: -moz-hidden-unscrollable;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 button,
@@ -32,8 +32,8 @@ input[type='submit'] {
 
 button,
 input {
-  font-family: 'Recursive', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-    'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Recursive', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 a {

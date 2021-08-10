@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Redirect } from 'react-router-dom';
 import { useAuth } from '../contexts/authContext';
 import { useCountries } from '../contexts/countriesContext';
 import '../styles/App.css';
 import WorldMap from './WorldMap';
 import CountryDetails from './CountryDetails';
+import { ReactComponent as Logo } from '../svg/logo.svg';
 import { ReactComponent as Settings } from '../svg/settings.svg';
 import SettingsModal from './SettingsModal';
+import LandingPage from './LandingPage';
 
 function App() {
   const { currentUser, logOut } = useAuth();
@@ -44,14 +45,16 @@ function App() {
   };
 
   const appContent = !currentUser ? (
-    <Redirect to="/login" />
+    <LandingPage />
   ) : (
     <>
       <div className="Navbar">
         <div className="navbar--country-label">
           <p>{countryLabel}</p>
         </div>
-        <h1 className="navbar-logo">TRAVELIFY</h1>
+        <h1 className="navbar-logo">
+          <Logo />
+        </h1>
         <p className="navbar-settings">
           <button
             className="navbar--settings-button"
