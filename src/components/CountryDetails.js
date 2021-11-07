@@ -14,10 +14,10 @@ const CountryDetails = ({ countryDetails, closeDetailsModal }) => {
   useEffect(async () => {
     setLoading(true);
     const response = await fetch(
-      `https://restcountries.eu/rest/v2/alpha/${countryDetails.countryID.toLowerCase()}`,
+      `https://restcountries.com/v3.1/alpha/${countryDetails.countryID.toLowerCase()}`,
     );
 
-    const data = await response.json();
+    const [data] = await response.json();
     setCountryInfo(data);
     setLoading(false);
   }, [countryDetails]);
@@ -34,7 +34,7 @@ const CountryDetails = ({ countryDetails, closeDetailsModal }) => {
         <div className="country-details--title">
           <div className="country-details--title-content">
             <img
-              src={`https://www.countryflags.io/${countryDetails.countryID.toLowerCase()}/flat/64.png`}
+              src={`https://flagcdn.com/w40/${countryDetails.countryID.toLowerCase()}.png`}
               alt={`Flag of ${countryDetails.countryName}`}
             />
             <h1>{countryDetails.countryName}</h1>
